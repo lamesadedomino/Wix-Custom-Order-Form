@@ -1,4 +1,4 @@
-Order Confirmation Page 
+
 
 import { session } from 'wix-storage';
 import wixLocation from 'wix-location';
