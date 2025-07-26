@@ -77,3 +77,28 @@ These store values between pages:
 - `restoreSession()` – Pre-populates form on page load
 - `calculateShipping(zip)` – Determines cost based on ZIP code
 - `generateOrderId()` – Creates order ID like `DOM-12345678`
+## 🚧 Roadmap / To-Do
+
+These are the remaining tasks and features currently in development:
+
+- [ ] 🔄 **Fix "Proceed to Confirmation" button** on the Buyer Information page  
+  - Should collect all customer input fields  
+  - Should store data in session and/or CMS  
+  - Should redirect to `/order-confirmation-page`  
+  - Currently not functional or not saving correctly
+
+- [ ] 💰 **Integrate PayPal Checkout** on the confirmation page  
+  - Use final total price  
+  - Ensure correct order ID is passed
+
+- [ ] 🖼️ **Show uploaded logo image** (if provided) on confirmation page
+
+- [ ] 🧾 **Save all order data** to the `Sales_Orders` CMS collection
+
+- [ ] 🛠️ **Admin Dashboard for Order Tracking**  
+  - Ability to filter by purchase location, delivery status, and commission paid
+
+- [ ] ✉️ **Send order confirmation email** to customer after payment (optional)
+
+---
+
