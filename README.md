@@ -16,3 +16,64 @@ This project is developed entirely within Wix using Velo (formerly Corvid). To u
 7. Test the flow thoroughly across all devices.
 
 All code is modular, with clear logic separation between pricing, session handling, and submission.
+## Code Reference
+
+### 🧩 Element IDs (Wix Page Elements)
+
+#### Dropdowns
+- `#dropdownLeg` – Leg Style
+- `#dropdownCup` – Cup Holder
+- `#dropdownLogo` – Logo/Decal Option
+- `#dropdownStain` – Stain Color
+- `#dropdownLocation` – Purchase Location
+
+#### Input Fields (Customer Info)
+- `#inputFirstName`
+- `#inputLastName`
+- `#inputEmail`
+- `#inputPhone`
+- `#inputStreet`
+- `#inputCity`
+- `#inputState`
+- `#inputZip`
+
+#### Pricing
+- `#inputShippingCost` – Displays calculated shipping based on ZIP
+- `#textTotalPrice` – Displays total price
+
+#### Buttons
+- `#buttonSubmit` – Final submission
+- `#buttonContinue` – From Buyer Info to Confirmation
+- `#editOrderButton` – Edit My Order (on Confirmation Page)
+
+#### Image Preview
+- `#imageStainPreview` – Shows stain color preview
+- `#uploadButton` – Upload custom image
+
+---
+
+### 📦 Session Storage Keys
+
+These store values between pages:
+
+- `legStyle`
+- `cupHolder`
+- `logoOption`
+- `deliveryOption` (replaced by ZIP logic)
+- `stainColor`
+- `purchaseLocation`
+- `firstName`, `lastName`, `email`, `phone`
+- `street`, `city`, `state`, `zip`
+- `totalPrice`
+- `shippingCost`
+- `uploadedImage`
+
+---
+
+### 🧠 Key Functions
+
+- `calculateTotal()` – Recalculates base + add-ons + shipping
+- `submitOrder()` – Collects all inputs and saves to session
+- `restoreSession()` – Pre-populates form on page load
+- `calculateShipping(zip)` – Determines cost based on ZIP code
+- `generateOrderId()` – Creates order ID like `DOM-12345678`
